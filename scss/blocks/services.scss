@@ -1,0 +1,140 @@
+.services {
+ background-color: $titleColor;
+ padding: 140px 0;
+ position: relative;
+
+ &::after {
+  content: "";
+  width: 45.83%;
+  height: 100%;
+  display: block;
+  background: url("../img/services-bg.jpg") right top no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+ }
+
+ .services__block {
+  width: calc(100% - 45.83%);
+  text-align: right;
+
+  .services__title {
+   font-size: 36px;
+   line-height: 36px;
+   letter-spacing: 3.6px;
+   font-weight: 700;
+   font-family: "Source Sans Pro", sans-serif;
+   border-right: 6px solid $btnColor;
+   padding: 4px 28px 4px;
+   color: $topColor;
+   text-transform: uppercase;
+   margin-right: 80px;
+   margin-bottom: 40px;
+  }
+ }
+
+ .services__element {
+  width: 65.88%;
+  margin: 50px 88px 50px auto;
+  position: relative;
+  &:last-child {
+   margin-bottom: 0;
+  }
+ }
+
+ .services__info {
+  h4 {
+   font-size: 18px;
+   line-height: 29px;
+   color: $btnColor;
+   font-weight: 600;
+   text-transform: uppercase;
+  }
+
+  p {
+   font-size: 14px;
+   line-height: 29px;
+   letter-spacing: 0.6px;
+   font-family: "Source Sans Pro", sans-serif;
+  }
+ }
+
+ .services__icon {
+
+  width: 64px;
+  height: 64px;
+  background-color: $topColor;
+  border-radius: 50%;
+  color: $btnColor;
+  position: absolute;
+  top: 50%;
+  right: -118px;
+  transform: translate(0, -50%);
+  z-index: 3;
+
+  &::before {
+   content: '';
+   width: 72px;
+   height: 72px;
+   background-color: $topColor;
+   display: block;
+   border-radius: 50%;
+   opacity: 0.3;
+   position: absolute;
+   top: 50%;
+   right: 50%;
+   transform: translate(50%, -50%);
+  }
+
+  svg, img {
+   fill: $btnColor;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+  }
+
+  .services__img {
+   width: 30px;
+   height: 30px;
+  }
+ }
+}
+
+@media (max-width: 980px) {
+ .services {
+  padding: 80px 0;
+ }
+}
+@media (max-width: 768px) {
+ .services {
+  &::after {
+   display: none;
+  }
+
+  .services__block {
+   width: 100%;
+   text-align: left;
+   padding: 0 25px;
+
+   .services__title {
+    padding: 4px 0 4px 28px;
+    border-right: none;
+    border-left: 6px solid $btnColor;
+   }
+  }
+
+  .services__element {
+   margin: 0;
+  }
+
+  .services__info {
+   margin: 30px 0;
+  }
+
+  .services__icon {
+   right: -35%;
+  }
+ }
+}

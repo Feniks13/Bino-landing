@@ -1,0 +1,76 @@
+.ideas {
+  background-color: $white;
+  box-shadow: 0 3px 5px rgba(0,0,0,.1);
+  padding: 80px 60px 110px;
+
+  .ideas__icon {
+    width: 127px;
+    height: 127px;
+    background-color: $btnColor;
+    margin: 0 auto;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: relative;
+
+    img, svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .ideas__img {
+      width: 40px;
+      height: 60px;
+      fill: $white;
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    letter-spacing: 1.35px;
+    text-transform: uppercase;
+    color: $titleColor;
+    font-weight: 600;
+    margin-top: 50px;
+
+    &::after {
+      content: "";
+      width: 42px;
+      height: 1px;
+      display: block;
+      background-color: #888888;
+      border-bottom: 1px solid #e1e1e1;
+      margin: 28px auto 0;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1.05px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 45px;
+  }
+
+  .ideas__btn {
+    @include btn();
+    width: 145px;
+    padding: 13px 0;
+    font-size: 12px;
+    letter-spacing: 0.12px;
+  }
+}
+
+@media (max-width: 980px) {
+  .ideas {
+    padding: 50px 40px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ideas {
+    padding: 40px 30px 60px;
+  }
+}

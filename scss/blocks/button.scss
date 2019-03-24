@@ -1,0 +1,20 @@
+.button {
+ margin: 60px 0;
+
+ a {
+  @include btn($two-button:true);
+ }
+}
+
+@media (max-width: 560px) {
+ .button {
+  a {
+   display: block;
+   margin: 10px auto;
+
+   &:first-child {
+    margin: 15px auto;
+   }
+  }
+ }
+}

@@ -1,0 +1,150 @@
+.portfolio {
+  padding-top: 125px;
+
+  .portfolio__top {
+    text-align: center;
+    h3 {
+      @include title();
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 29px;
+      margin: 15px auto;
+    }
+
+    .devider {
+      margin-top: 25px;
+      &::before, &::after {
+        background-color: $black;
+      }
+    }
+  }
+
+  .portfolio__links {
+    margin: 66px auto 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+    font-weight: 600;
+    font-size: 14px;
+
+    a{
+      color: $black;
+      text-decoration: none;
+      margin: 5px 23px;
+      display: inline-block;
+
+      &:hover {
+        color: $btnColor;
+        transition: 500ms;
+      }
+    }
+  }
+
+  .portfolio__block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  .portfolio__element {
+    flex-basis: 25%;
+    position: relative;
+
+    a {
+      text-decoration: none;
+      display: block;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(231, 76, 60, .8);
+        opacity: 0;
+        transition-duration: 500ms;
+        transition-property: opacity;
+      }
+
+      &:hover {
+        &::after, .portfolio__info {
+          opacity: 1;
+        }
+      }
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .portfolio__info {
+      position: absolute;
+      left: 10%;
+      bottom: 10%;
+      z-index: 1;
+      color: $white;
+      letter-spacing: 1.2px;
+      opacity: 0;
+      transition-duration: 500ms;
+      transition-property: opacity;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 44px;
+        border: 2px solid $white;
+        margin-bottom: 25px;
+      }
+
+      h2 {
+        font-size: 24px;
+        font-family: "Source Sans Pro", sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+
+      }
+
+      span {
+        font-size: 14px;
+        letter-spacing: 0.7px;
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .portfolio {
+    padding-top: 60px;
+
+    .portfolio__element {
+      .portfolio__info {
+        &::before {
+          margin-bottom: 18px;
+        }
+        h2 {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .portfolio {
+    .portfolio__element {
+      flex-basis: 50%;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .portfolio {
+    .portfolio__element {
+      flex-basis: 100%;
+    }
+  }
+}

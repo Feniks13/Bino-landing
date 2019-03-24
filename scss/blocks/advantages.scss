@@ -1,0 +1,124 @@
+.advantages {
+ border-bottom: 1px solid $borderLine;
+ padding-bottom: 110px;
+
+ .advantages__block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ }
+
+ .advantages__element {
+  flex-basis: 23.93%;
+  text-align: center;
+  transition-property: color, background-color;
+  transition-duration: 500ms;
+
+  p {
+   font-size: 12px;
+   line-height: 20px;
+   letter-spacing: 0.9px;
+   color: $black;
+   font-weight: 300;
+   font-family: "Source Sans Pro";
+  }
+
+  &:hover {
+   .advantages__icon {
+    transform: rotate(45deg);
+    border-color: $btnColor;
+    transition: 500ms;
+
+    img, svg {
+     transform: translate(-50%, -50%) rotate(-45deg);
+     transition: 500ms;
+    }
+   }
+   .advantages__title {
+    color: $btnColor;
+    transition: 500ms;
+   }
+  }
+ }
+
+ .advantages__icon {
+  width: 72px;
+  height: 72px;
+  border: 1px solid #e5e5e5;
+  margin: 20px auto;
+  position: relative;
+ }
+
+ img, svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  fill: $btnColor;
+ }
+
+ .advantages__img1 {
+  width: 38px;
+  height: 17px;
+  color: $btnColor;
+ }
+ .advantages__img2 {
+  width: 27px;
+  height: 23px;
+ }
+ .advantages__img3 {
+  width: 30px;
+  height: 35px;
+ }
+ .advantages__img4 {
+  width: 25px;
+  height: 25px;
+ }
+
+ .advantages__title {
+  font-size: 18px;
+  letter-spacing: 1.35px;
+  text-transform: uppercase;
+  color: $titleColor;
+  font-weight: 600;
+
+  &::after {
+   content: '';
+   width: 42px;
+   height: 1px;
+   display: block;
+   margin: 20px auto 15px;
+   background-color: #888888;
+   border-bottom: 1px solid #e1e1e1;
+  }
+ }
+}
+
+@media (max-width: 980px) {
+ .advantages {
+  padding-bottom: 80px;
+ }
+}
+
+@media (max-width: 768px) {
+ .advantages {
+  .advantages__element {
+   flex-basis: 48%;
+   margin-bottom: 10px;
+  }
+ }
+}
+
+@media (max-width: 680px) {
+ .advantages {
+  padding-bottom: 40px;
+ }
+}
+
+@media (max-width: 480px) {
+ .advantages {
+  .advantages__element {
+   flex-basis: 100%;
+  }
+ }
+}
