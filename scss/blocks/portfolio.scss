@@ -139,6 +139,12 @@
     .portfolio__element {
       flex-basis: 50%;
     }
+    .portfolio__links {
+      margin-top: 50px;
+      a {
+        margin: 5px 6px;
+      }
+    }
   }
 }
 @media (max-width: 480px) {
