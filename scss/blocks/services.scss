@@ -116,9 +116,9 @@
   .services__block {
    width: 100%;
    text-align: left;
-   padding-left: 25px;
 
    .services__title {
+     margin-left: 20px;
     padding: 4px 0 4px 28px;
     border-right: none;
     border-left: 6px solid $btnColor;
@@ -127,6 +127,7 @@
 
   .services__element {
    margin: 0;
+   padding-left: 20px;
   }
 
   .services__info {
